@@ -43,6 +43,6 @@ function search($query, $choices){
 $choices = file('includes/us_passenger_trains.txt', FILE_IGNORE_NEW_LINES);
 $suggestions = search($query, $choices);
 sort($suggestions);
-$max_suggestions = 3;
+$max_suggestions = 5;
 $top_suggestions = array_slice($suggestions, 0, $max_suggestions);
 echo json_encode($top_suggestions);

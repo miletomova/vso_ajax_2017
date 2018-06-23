@@ -44,25 +44,22 @@ $result = mysqli_query($conn, $read_query);
 				
 				type:'POST',
 				url:'query.php',
-				data:{	title:  title,
-					content: 	content},
-					success:function(data){
+				data:{	title:  	title,
+						content: 	content },						
+				success:function(data){
 						var res = $.parseJSON(data);
 						var h1 = $('<h1>').text(res.title);						
 						var p = $('<p>').text(res.content);	
 						var hr = $('<hr>');
-
 						$('#info').append(h1);					
 						$('#info').append(p);
 						$('#info').append(hr);
-
-					}
-
-
-				});
-
-			
-		}
+					},
+				error:function(data){
+					//code to execute on error
+				}
+				});			
+			}
 
 	</script>
 </body>

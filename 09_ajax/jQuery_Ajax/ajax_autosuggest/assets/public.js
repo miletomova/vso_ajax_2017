@@ -47,7 +47,6 @@ suggestions.css('display', 'block');
       url:'autosuggest.php',
       data:{q:  search.val()},
       success:function(data){
-
        suggestionsToList(data);
      }
 
