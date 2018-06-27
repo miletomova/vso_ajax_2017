@@ -40,8 +40,7 @@ $result = mysqli_query($conn, $read_query);
 			e.preventDefault();
 			var title = $('#title').val();
 			var content = $('#content').val();
-			$.ajax({
-				
+			$.ajax({				
 				type:'POST',
 				url:'query.php',
 				data:{	title:  	title,

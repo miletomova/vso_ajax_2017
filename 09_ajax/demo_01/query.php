@@ -17,7 +17,6 @@ if(mysqli_query($conn, $insert_query)){
 
 	$row = mysqli_fetch_assoc($result);
 
-
 	echo json_encode($row) ;
 }
 
